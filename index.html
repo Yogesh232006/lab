@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yogeshwaran | AI & ML Student</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav h2 {
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 100px 10%;
+      min-height: 100vh;
+    }
+
+    #home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a, #172554);
+    }
+
+    #home h1 {
+      font-size: 55px;
+      color: #38bdf8;
+    }
+
+    #home h2 {
+      font-size: 28px;
+      margin: 10px 0;
+    }
+
+    #home p {
+      max-width: 650px;
+      color: #cbd5e1;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #7dd3fc;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 35px;
+      color: #38bdf8;
+      margin-bottom: 40px;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #cbd5e1;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 15px 25px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #334155;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #38bdf8;
+    }
+
+    .card h3 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 10px;
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 10px;
+        font-size: 13px;
+      }
+
+      #home h1 {
+        font-size: 40px;
+      }
+
+      #home h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h2>Yogeshwaran</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <h1>Hi, I'm Yogeshwaran</h1>
+    <h2>AI & ML Student</h2>
+    <p>
+      Student at New Horizon College of Engineering (NHCE),
+      passionate about Artificial Intelligence, Machine Learning,
+      programming and technology.
+    </p>
+    <a href="#about" class="btn">Explore My Portfolio</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+      <p>
+        Hello! I'm <strong>Yogeshwaran</strong>, a student at
+        <strong>New Horizon College of Engineering (NHCE)</strong>,
+        pursuing my studies in the
+        <strong>Artificial Intelligence & Machine Learning</strong>
+        department.
+      </p>
+
+      <br>
+
+      <p>
+        I am interested in learning new technologies, developing
+        software projects and exploring the exciting fields of
+        Artificial Intelligence and Machine Learning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">Java</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Artificial Intelligence</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <h3>AI Chatbot</h3>
+        <p>
+          A simple chatbot project designed to answer user questions
+          using AI concepts.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Student Management System</h3>
+        <p>
+          A basic application for managing student information,
+          records and academic details.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Machine Learning Project</h3>
+        <p>
+          A machine learning project focused on data analysis,
+          model training and prediction.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact">
+      <p>📧 Email: your-email@example.com</p>
+      <p>📱 Phone: +91 XXXXX XXXXX</p>
+      <p>📍 Bengaluru, India</p>
+
+      <a href="mailto:your-email@example.com" class="btn">
+        Send Me an Email
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Yogeshwaran | AI & ML Student</p>
+  </footer>
+
+</body>
+</html>
