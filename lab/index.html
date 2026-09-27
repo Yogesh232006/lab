@@ -1,0 +1,530 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yogeshwaran | AI & ML Student</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #0a0f1f;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 18px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(10, 15, 31, 0.9);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #00d9ff;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #00d9ff;
+    }
+
+    /* HOME */
+    #home {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 100px 20px 50px;
+        background:
+            radial-gradient(circle at top right, #123d60, transparent 35%),
+            radial-gradient(circle at bottom left, #251052, transparent 35%);
+    }
+
+    .hero {
+        max-width: 850px;
+    }
+
+    .profile-circle {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #00d9ff, #7c3aed);
+        font-size: 55px;
+        font-weight: bold;
+        box-shadow: 0 0 40px rgba(0,217,255,0.3);
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+        color: #00d9ff;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        color: #a5b4fc;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        color: #cbd5e1;
+        max-width: 700px;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    .buttons {
+        margin-top: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        margin: 8px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .primary {
+        background: #00d9ff;
+        color: #07111f;
+    }
+
+    .secondary {
+        border: 1px solid #00d9ff;
+        color: #00d9ff;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,217,255,0.2);
+    }
+
+    /* GENERAL */
+    section {
+        padding: 100px 10%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 50px;
+        color: #00d9ff;
+    }
+
+    /* ABOUT */
+    .about-container {
+        max-width: 850px;
+        margin: auto;
+        text-align: center;
+        color: #cbd5e1;
+        font-size: 18px;
+    }
+
+    .highlight {
+        color: #00d9ff;
+        font-weight: bold;
+    }
+
+    /* EDUCATION */
+    .education-card {
+        max-width: 750px;
+        margin: auto;
+        padding: 30px;
+        background: #111827;
+        border-radius: 15px;
+        border-left: 4px solid #00d9ff;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .education-card h3 {
+        color: #00d9ff;
+        font-size: 24px;
+    }
+
+    .education-card p {
+        color: #cbd5e1;
+        margin-top: 8px;
+    }
+
+    /* SKILLS */
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .skill {
+        padding: 20px;
+        text-align: center;
+        background: #111827;
+        border: 1px solid #263449;
+        border-radius: 12px;
+        transition: 0.3s;
+    }
+
+    .skill:hover {
+        transform: translateY(-5px);
+        border-color: #00d9ff;
+        color: #00d9ff;
+    }
+
+    /* PROJECTS */
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    .project-card {
+        background: #111827;
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid #263449;
+        transition: 0.3s;
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px);
+        border-color: #00d9ff;
+        box-shadow: 0 10px 30px rgba(0,217,255,0.1);
+    }
+
+    .project-icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+        color: #00d9ff;
+        margin-bottom: 10px;
+    }
+
+    .project-card p {
+        color: #cbd5e1;
+    }
+
+    /* CONTACT */
+    #contact {
+        text-align: center;
+        background: #080c18;
+    }
+
+    .contact-box {
+        max-width: 650px;
+        margin: auto;
+    }
+
+    .contact-box p {
+        color: #cbd5e1;
+        margin: 12px;
+        font-size: 18px;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 25px;
+        background: #050811;
+        color: #64748b;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+
+        nav {
+            padding: 15px 5%;
+        }
+
+        nav ul {
+            gap: 12px;
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .hero h2 {
+            font-size: 22px;
+        }
+
+        section {
+            padding: 80px 6%;
+        }
+
+        .section-title {
+            font-size: 30px;
+        }
+    }
+</style>
+
+</head> <body>
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">Yogeshwaran.</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- HOME -->
+<section id="home">
+
+    <div class="hero">
+
+        <div class="profile-circle">
+            Y
+        </div>
+
+        <h1>Hi, I'm <span>Yogeshwaran</span></h1>
+
+        <h2>AI & Machine Learning Student</h2>
+
+        <p>
+            Passionate about Artificial Intelligence, Machine Learning,
+            programming and building innovative technology solutions.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn primary">
+                View My Projects
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Contact Me
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-container">
+
+        <p>
+            Hello! I'm <span class="highlight">Yogeshwaran</span>,
+            a student at
+            <span class="highlight">
+                New Horizon College of Engineering (NHCE)
+            </span>,
+            pursuing my studies in
+            <span class="highlight">
+                Artificial Intelligence & Machine Learning
+            </span>.
+        </p>
+
+        <br>
+
+        <p>
+            I enjoy exploring new technologies and developing projects
+            using programming, AI and machine learning. My goal is to
+            continuously improve my technical skills and create useful
+            solutions using technology.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-card">
+
+        <h3>
+            New Horizon College of Engineering
+        </h3>
+
+        <p>
+            Department of Artificial Intelligence & Machine Learning
+        </p>
+
+        <p>
+            Bengaluru, Karnataka
+        </p>
+
+        <p>
+            🎓 Student
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">🐍 Python</div>
+
+        <div class="skill">☕ Java</div>
+
+        <div class="skill">🌐 HTML</div>
+
+        <div class="skill">🎨 CSS</div>
+
+        <div class="skill">⚡ JavaScript</div>
+
+        <div class="skill">🤖 Machine Learning</div>
+
+        <div class="skill">🧠 Artificial Intelligence</div>
+
+        <div class="skill">📊 Data Analysis</div>
+
+        <div class="skill">🔧 Git & GitHub</div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+
+            <div class="project-icon">🤖</div>
+
+            <h3>AI Chatbot</h3>
+
+            <p>
+                A chatbot project designed to interact with users
+                and provide responses using artificial intelligence
+                concepts.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="project-icon">📊</div>
+
+            <h3>Machine Learning Project</h3>
+
+            <p>
+                A machine learning project involving data processing,
+                model training and prediction.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="project-icon">🎓</div>
+
+            <h3>Student Management System</h3>
+
+            <p>
+                A simple application designed to manage student
+                information and academic records.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2 class="section-title">Get In Touch</h2>
+
+    <div class="contact-box">
+
+        <p>📧 your-email@example.com</p>
+
+        <p>📱 +91 XXXXX XXXXX</p>
+
+        <p>📍 Bengaluru, Karnataka, India</p>
+
+        <div class="buttons">
+
+            <a
+                href="mailto:your-email@example.com"
+                class="btn primary">
+                Send Email
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Yogeshwaran | AI & ML Student
+    </p>
+
+</footer>
+
+</body> </html>
